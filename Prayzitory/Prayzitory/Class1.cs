@@ -8,5 +8,6 @@ namespace Prayzitory
 {
     public class Class1
     {
+
     }
 }
