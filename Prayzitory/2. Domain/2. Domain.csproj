@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9D79560E-6603-4087-A164-410BE713A2A2}</ProjectGuid>
+    <ProjectGuid>{10F7B17E-7915-46B7-A22E-54F8350EA6C9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Prayzitory</RootNamespace>
-    <AssemblyName>Prayzitory</AssemblyName>
+    <RootNamespace>_2.Domain</RootNamespace>
+    <AssemblyName>_2.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,9 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IPrayzitoryController.cs" />
-    <Compile Include="PrayDTO.cs" />
-    <Compile Include="PrayInteractor.cs" />
+    <Compile Include="Pray.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
