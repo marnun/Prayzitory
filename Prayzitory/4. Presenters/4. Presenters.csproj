@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9D79560E-6603-4087-A164-410BE713A2A2}</ProjectGuid>
+    <ProjectGuid>{D9DE71C9-64A9-4C04-AA0C-887D9DA8FFBB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Prayzitory</RootNamespace>
-    <AssemblyName>Prayzitory</AssemblyName>
+    <RootNamespace>_4.Presenters</RootNamespace>
+    <AssemblyName>_4.Presenters</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,10 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IPrayzitoryController.cs" />
-    <Compile Include="PrayDTO.cs" />
-    <Compile Include="PrayInteractor.cs" />
+    <Compile Include="Controllers\PraysController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\3. Interactors\3. Interactors.csproj">
+      <Project>{C5D84961-D103-4553-B653-267D5AB49DC8}</Project>
+      <Name>3. Interactors</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
