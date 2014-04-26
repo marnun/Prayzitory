@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="PrayDto.cs" />
     <Compile Include="PrayInteractor.cs" />
+    <Compile Include="PraysService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
