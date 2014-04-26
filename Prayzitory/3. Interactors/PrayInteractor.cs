@@ -13,9 +13,10 @@ namespace Interactors
             this._praysService = praysService;
         }
 
-        public void CreateNewPray(string pray, DateTime timestemp, string user)
+        public void CreateNewPray(string pray, DateTime timestamp, int userId)
         {
-            throw new NotImplementedException();
+            var user = _praysService.GetUser(userId);
+            _praysService.CreateNewPray(pray, timestamp, user);
         }
 
         public IEnumerable<PrayDto> GetTopPrays()

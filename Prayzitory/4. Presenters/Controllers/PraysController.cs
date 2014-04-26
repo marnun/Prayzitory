@@ -6,7 +6,7 @@ namespace Presenters.Controllers
 {
     public interface IPraysController
     {
-        void NewPray(string text, DateTime timestemp, string user);
+        void NewPray(string text, DateTime timestemp, int userId);
         IEnumerable<PrayDto> ListPrays();
     }
 
@@ -19,11 +19,11 @@ namespace Presenters.Controllers
             _praysService = praysService;
         }
 
-        public void NewPray(string text, DateTime timestemp, string user)
+        public void NewPray(string text, DateTime timestemp, int userId)
         {
             //calls add new text UseCase
             var interactor = new PrayInteractor(_praysService);
-            interactor.CreateNewPray(text, timestemp, user);
+            interactor.CreateNewPray(text, timestemp, userId);
         }
 
         public IEnumerable<PrayDto> ListPrays()
