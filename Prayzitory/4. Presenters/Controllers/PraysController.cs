@@ -6,23 +6,30 @@ namespace Presenters.Controllers
 {
     public interface IPraysController
     {
-        void NewPray(string text, DateTime timestemp, string user);
-        List<PrayDto> ListPrays();
+        void NewPray(string text, DateTime timestemp, int userId);
+        IEnumerable<PrayDto> ListPrays();
     }
 
     public class PraysController : IPraysController
     {
-        public void NewPray(string text, DateTime timestemp, string user)
+        protected IPraysService _praysService;
+
+        public PraysController(IPraysService praysService)
         {
-            //calls add new text UseCase
-            var interactor = new PrayInteractor();
-            interactor.CreateNewPray(text, timestemp, user);
+            _praysService = praysService;
         }
 
-        public List<PrayDto> ListPrays()
+        public void NewPray(string text, DateTime timestemp, int userId)
         {
-            var interactor = new PrayInteractor();
-            List<PrayDto> result = interactor.GetTopPrays();
+            //calls add new text UseCase
+            var interactor = new PrayInteractor(_praysService);
+            interactor.CreateNewPray(text, timestemp, userId);
+        }
+
+        public IEnumerable<PrayDto> ListPrays()
+        {
+            var interactor = new PrayInteractor(_praysService);
+            IEnumerable<PrayDto> result = interactor.GetTopPrays();
 
             return result;
         }
